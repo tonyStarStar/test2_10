@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+    <!DOCTYPE configuration
+    PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-config.dtd">
+    <configuration>
+
+
+
+    <settings>
+<!--        懒加载-->
+        <setting name="lazyLoadingEnabled" value="true"/>
+        <!--        当设置为true的时候，懒加载对象可能被任何懒属性加载，否则按需加载-->
+        <setting name="aggressiveLazyLoading" value="false"/>
+        <!--        开启二级缓存-->
+        <setting name="cacheEnabled" value="true"/>
+    </settings>
+
+    <!--    别名
+        配置的路径中的所有的类都可以使用类名代替全限定名-->
+
+    <typeAliases>
+        <package name="net.tony.pojo"/>
+    </typeAliases>
+<!--    分页插件-->
+<plugins>
+    <plugin interceptor="com.github.pagehelper.PageInterceptor"></plugin>
+</plugins>
+
+
+</configuration>
